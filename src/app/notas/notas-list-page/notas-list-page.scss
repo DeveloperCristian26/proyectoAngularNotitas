@@ -1,0 +1,21 @@
+.notas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.nota-card {
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nota-card h3 {
+  margin-top: 0;
+}
+
+.nota-card a {
+  text-decoration: none;
+  color: #2d87f0;
+}

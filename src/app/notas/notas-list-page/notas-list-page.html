@@ -1,1 +1,13 @@
-<p>notas-list-page works!</p>
+<h2>📋 Mis Notas</h2>
+
+<div *ngIf="notas.length === 0">
+  <p>No tienes notas aún.</p>
+</div>
+
+<div class="notas-grid">
+  <div class="nota-card" *ngFor="let nota of notas">
+    <h3>{{ nota.titulo }}</h3>
+    <p>{{ nota.nota.substring(0, 100) }}...</p>
+    <a [routerLink]="['/notas', nota._id]">🖊 Ver / Editar</a>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="layout">
+  <aside class="sidebar">
+    <h2>📚 Notas</h2>
+    <nav>
+      <a routerLink="/notas" routerLinkActive="active">📋 Todas</a>
+      <a routerLink="/notas/nueva" routerLinkActive="active">➕ Nueva</a>
+    </nav>
+    <!-- DESPUÉS -->
+    <button *ngIf="estaLogueado" (click)="logout()">🚪 Cerrar sesión</button>
+  </aside>
+
+  <main class="main-content">
+    <router-outlet />
+  </main>
+</div>
