@@ -1,0 +1,28 @@
+<h2>🔐 Iniciar Sesión</h2>
+
+<form (submit)="onLogin()" #form="ngForm">
+  <label>
+    Correo:
+    <input type="email" name="correo" [(ngModel)]="correo" required />
+  </label>
+  <br /><br />
+
+  <label>
+    Contraseña:
+    <input
+      type="password"
+      name="contrasena"
+      [(ngModel)]="contrasena"
+      required
+    />
+  </label>
+  <br /><br />
+
+  <button type="submit">Ingresar</button>
+</form>
+
+<p *ngIf="error" style="color: red">{{ error }}</p>
+<p>
+  ¿No tienes cuenta?
+  <a routerLink="/register">Regístrate aquí</a>
+</p>
