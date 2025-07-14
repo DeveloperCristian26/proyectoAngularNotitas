@@ -1,34 +1,33 @@
-<h2>📝 Registrarse</h2>
+<div class="wrapper">
+  <div class="form-wrapper sing-in">
+    <form (ngSubmit)="onRegister()" #form="ngForm" autocomplete="off">
+      <h2> Registrarse</h2>
 
-<form (submit)="onRegister()" #form="ngForm">
-  <label>
-    Nombre:
-    <input type="text" name="nombre" [(ngModel)]="nombre" required />
-  </label>
-  <br /><br />
+      <div class="input-groud">
+         <input type="text" name="nombre" [(ngModel)]="nombre" required>
+        <label for="">nombre</label>
+      </div>
 
-  <label>
-    Correo:
-    <input type="email" name="correo" [(ngModel)]="correo" required />
-  </label>
-  <br /><br />
+       <div class="input-groud">
+        <input type="email" name="correo" [(ngModel)]="correo" required>
+        <label for="">correo</label>
+      </div>
 
-  <label>
-    Contraseña:
-    <input
-      type="password"
-      name="contrasena"
-      [(ngModel)]="contrasena"
-      required
-    />
-  </label>
-  <br /><br />
+      <div class="input-groud">
+        <input type="password" name="contrasena" [(ngModel)]="contrasena" required>
+        <label for="">contraseña</label>
+      </div>
 
-  <button type="submit">Registrarse</button>
-</form>
+      <button type="submit">Registrarse</button>
 
-<p *ngIf="error" style="color: red">{{ error }}</p>
-<p>
-  ¿Ya tienes cuenta?
-  <a routerLink="/login">Inicia sesión</a>
-</p>
+      <div class="singUp-link">
+        <p *ngIf="error" style="color: red">{{ error }}</p>
+        <p>
+          ¿Ya tienes cuenta?
+          <a routerLink="/login">Inicia sesión</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
+| |

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './nota-form-page.html',
-  styleUrl: './nota-form-page.scss',
+  styleUrls: ['./nota-form-page.scss'], // ← corregido: styleUrl → styleUrls
 })
 export class NotaFormPage {
   titulo = '';
@@ -25,7 +25,7 @@ export class NotaFormPage {
         this.router.navigate(['/notas']);
       })
       .catch((err) => {
-        this.error = err.response?.data?.message || 'Error al guardar la nota';
+        this.error = err?.error?.message || 'Error al guardar la nota';
       });
   }
 }

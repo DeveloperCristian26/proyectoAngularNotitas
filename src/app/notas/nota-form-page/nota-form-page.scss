@@ -1,0 +1,51 @@
+form input{
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+
+form label{
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  font-size: 16px;
+  
+}
+form textarea{
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+
+form button{
+  margin: 15px 0;
+  padding: 10px 15px;
+  background-color: #3492f7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #2a7dc3;
+}
+
+.nota-container {
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  gap: 10px; /* espacio entre label y textarea */
+}
+
+.nota-container label {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap; /* evita que se corte "Nota:" */
+}

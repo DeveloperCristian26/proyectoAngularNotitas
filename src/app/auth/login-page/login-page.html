@@ -1,28 +1,30 @@
-<h2>🔐 Iniciar Sesión</h2>
+<div class="wrapper">
+  <div class="form-wrapper sing-in">
+    <form (ngSubmit)="onLogin()" #form="ngForm" autocomplete="off">
+      <h2>Login</h2>
 
-<form (submit)="onLogin()" #form="ngForm">
-  <label>
-    Correo:
-    <input type="email" name="correo" [(ngModel)]="correo" required />
-  </label>
-  <br /><br />
+      <div class="input-groud">
+        <input type="email" name="correo" [(ngModel)]="correo" required>
+        <label for="">correo</label>
+      </div>
 
-  <label>
-    Contraseña:
-    <input
-      type="password"
-      name="contrasena"
-      [(ngModel)]="contrasena"
-      required
-    />
-  </label>
-  <br /><br />
+      <div class="input-groud">
+        <input type="password" name="contrasena" [(ngModel)]="contrasena" required>
+        <label for="">contraseña</label>
+      </div>
 
-  <button type="submit">Ingresar</button>
-</form>
 
-<p *ngIf="error" style="color: red">{{ error }}</p>
-<p>
-  ¿No tienes cuenta?
-  <a routerLink="/register">Regístrate aquí</a>
-</p>
+      <button type="submit">login</button>
+      
+      <div class="singUp-link">
+
+        <p *ngIf="error" style="color: red">{{ error }}</p>
+        <p>
+          ¿No tienes cuenta?
+          <a routerLink="/register">Regístrate aquí</a>
+        </p>
+
+      </div>
+    </form>
+  </div>
+</div>

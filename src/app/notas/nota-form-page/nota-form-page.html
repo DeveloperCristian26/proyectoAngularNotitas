@@ -1,19 +1,26 @@
 <h2>➕ Nueva Nota</h2>
 
-<form (submit)="crearNota()" #form="ngForm">
+<form (ngSubmit)="crearNota()" #form="ngForm">
   <label>
     Título:
     <input type="text" name="titulo" [(ngModel)]="titulo" required />
   </label>
   <br /><br />
 
-  <label>
-    Nota:
-    <textarea name="nota" [(ngModel)]="nota" required></textarea>
-  </label>
+  <div class="nota-container">
+    <label for="nota">Nota:</label>
+    <textarea
+      id="nota"
+      name="nota"
+      [(ngModel)]="nota"
+      rows="4"
+      cols="30"
+      required
+    ></textarea>
+  </div>
   <br /><br />
 
-  <button type="submit">Guardar</button>
+  <button type="submit" [disabled]="form.invalid">Guardar</button>
 
   <p *ngIf="error" style="color: red">{{ error }}</p>
 </form>

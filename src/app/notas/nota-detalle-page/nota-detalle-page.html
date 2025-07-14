@@ -1,20 +1,29 @@
 <h2>🖊 Editar Nota</h2>
 
-<form (submit)="actualizar()" *ngIf="nota" #form="ngForm">
+<form (ngSubmit)="actualizar()" *ngIf="nota" #form="ngForm">
   <label>
     Título:
     <input type="text" [(ngModel)]="nota.titulo" name="titulo" required />
   </label>
   <br /><br />
 
-  <label>
-    Nota:
-    <textarea [(ngModel)]="nota.nota" name="nota" required></textarea>
-  </label>
-  <br /><br />
+  <div class="nota-container">
+    <label for="nota">Nota:</label>
+    <textarea
+      id="nota"
+      name="nota"
+      [(ngModel)]="nota.nota"
+      rows="4"
+      cols="30"
+      required
+    ></textarea>
+  </div>
 
-  <button type="submit">Actualizar</button>
-  <button type="button" (click)="eliminar()">🗑 Eliminar</button>
+  <br /><br />
+  <div class="actions">
+    <button type="submit" [disabled]="form.invalid">Actualizar</button>
+    <button type="button" (click)="eliminar()">🗑 Eliminar</button>
+  </div>
 
   <p *ngIf="error" style="color: red">{{ error }}</p>
 </form>

@@ -9,7 +9,7 @@ import { ApiService } from '../../services/api';
   standalone: true,
   imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './nota-detalle-page.html',
-  styleUrl: './nota-detalle-page.scss',
+  styleUrls: ['./nota-detalle-page.scss'], // ← Corregido: styleUrl → styleUrls
 })
 export class NotaDetallePage implements OnInit {
   nota: any = null;
@@ -29,7 +29,7 @@ export class NotaDetallePage implements OnInit {
       .then((res) => {
         this.nota = res.data;
       })
-      .catch((err) => {
+      .catch(() => {
         this.error = 'Error al cargar la nota';
       });
   }
