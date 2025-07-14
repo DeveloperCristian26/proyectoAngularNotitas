@@ -49,3 +49,31 @@ button:hover{
   font-size: 16px;
   white-space: nowrap; /* evita que se corte "Nota:" */
 }
+
+@media only screen and (max-width: 480px) {
+  form input,
+  form textarea {
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  form label,
+  .nota-container label {
+    font-size: 14px;
+  }
+
+  form button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .nota-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nota-container label {
+    margin-bottom: 5px;
+  }
+}

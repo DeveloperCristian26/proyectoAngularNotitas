@@ -24,3 +24,24 @@
   text-decoration: none;
   color: #afc7e2;
 }
+
+@media only screen and (max-width: 480px) {
+  .notas-grid {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 0.75rem;
+    padding: 0 10px; /* opcional para evitar bordes pegados */
+  }
+
+  .nota-card {
+    padding: 0.75rem;
+    font-size: 14px;
+  }
+
+  .nota-card h3 {
+    font-size: 16px;
+  }
+
+  .nota-card a {
+    font-size: 14px;
+  }
+}

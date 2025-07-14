@@ -72,3 +72,34 @@
 }
 
 
+@media only screen and (max-width: 600px) {
+  .layout {
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+
+  .sidebar a {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
+  .sidebar button {
+    margin-top: 0;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}

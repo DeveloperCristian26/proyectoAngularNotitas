@@ -118,3 +118,28 @@ button:hover{
 .singUp-link p a:hover{
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+        height: auto;
+        padding: 25px 20px;
+    }
+
+    .input-groud input {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    button {
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .singUp-link {
+        font-size: 13px;
+    }
+}

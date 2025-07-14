@@ -50,3 +50,53 @@ button:hover{
   white-space: nowrap;
 }
 
+.actions {
+  display: flex;
+  gap: 15px; 
+  margin-top: 10px;
+}
+
+
+.actions button:last-child {
+  background-color: #f44336; /* rojo para eliminar */
+}
+
+.actions button:last-child:hover {
+  background-color: #d32f2f;
+}
+
+
+@media only screen and (max-width: 480px) {
+  form input,
+  form textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  form label,
+  .nota-container label {
+    font-size: 14px;
+  }
+
+  form button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .nota-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nota-container label {
+    margin-bottom: 5px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
