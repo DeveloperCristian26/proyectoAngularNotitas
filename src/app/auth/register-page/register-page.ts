@@ -24,7 +24,7 @@ export class RegisterPage {
       .registrar(this.nombre, this.correo, this.contrasena)
       .then((res) => {
         localStorage.setItem('token', res.data.token);
-        this.router.navigate(['/notas']); // Redirige a las notas
+        this.router.navigate(['/login']); // Redirige a las notas
       })
       .catch((err) => {
         this.error = err.response?.data?.msg || 'Error al registrarse';
